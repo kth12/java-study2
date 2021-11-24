@@ -1,0 +1,43 @@
+package constructors;
+
+public class person {
+	private String name;
+	private double height;
+
+//	public person() {} //기본생성자 (생략가능)
+//	생성자 메소드 : public + 클래스명(), 리턴타입없음
+	public person() {
+		name = "익명";
+		height = 170;
+		System.out.println("한사람을 생성!");
+	}
+
+	public person(String name, double height) {
+		this.name = name;
+		this.height = height;
+		System.out.println("한 사람을 생성!");
+	}
+	//toString 메소드
+	public String toString() {
+		
+		return  "이름 : "+name+",키: "+height;
+	}
+
+	// get set 메소드
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getheghit() {
+		return height;
+	}
+
+	public void setheight(double height) {
+		this.height = height;
+	}
+
+}
