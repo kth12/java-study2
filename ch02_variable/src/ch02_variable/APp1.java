@@ -14,13 +14,13 @@ public class APp1 {
 		a = 7; //a에 초기값 입력
 
 
-		System.out.Printin("변수z의 값은: " + z); //문자열("")+정수 =문자열이 된다.
-		System.out.Printin("변수a의 값은: " + a); //
-		System.out.Printin("변수b의 값은: " + b);
+		System.out.println("변수z의 값은: " + z); //문자열("")+정수 =문자열이 된다.
+		System.out.println("변수a의 값은: " + a); //
+		System.out.println("변수b의 값은: " + b);
 		// 변수는 값을 다시 재할당(바꿀수 다)
 		z= a+b;
 		
-		System.out.Printin("변수z의 값은: " + z);
+		System.out.println("변수z의 값은: " + z);
 	}
 
 }

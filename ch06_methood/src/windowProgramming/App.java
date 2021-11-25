@@ -8,7 +8,6 @@ public class App {
 		//현제 보이도록 true , top 
 		window win = new window();
 		win.setwidth(300);
-		win.sethegiht(600);
 		win.setwidth(300);
 		win.setwidth(300);
 	}
