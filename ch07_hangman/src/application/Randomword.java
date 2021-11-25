@@ -28,22 +28,32 @@ public class Randomword {
 		StringBuilder sb = new StringBuilder();
 //		characters[3] = 'x'; // 테스트
 		for (char c : characters) {
-			if (c == '\u0000') 
-				sb.append(c == '\u0000' ? '_' :c);
-				sb.append(' ');
-			}
 
-//			System.out.println(slectword); //정답 출력 (테스트용)
-			return sb.toString(); // 선택된 랜덤 단어를 가져옴
+			sb.append(c == '\u0000' ? '_' : c);
+			sb.append(' ');
 		}
-	
-		public void addGuess(char c) {
-			//넘어온 문자를 검사해서 선택단어에 있으면 characters 배열에 저장
-         for(int i=0; i<slectword.length(); i++) {//단어 길이만큼 반복
-        	 if(c == slectword.charAt(i)) {
-        		 characters[i] = c;
-        	 }
-         }
+
+		System.out.println(slectword); // 정답 출력 (테스트용)
+		return sb.toString(); // 선택된 랜덤 단어를 가져옴
+	}
+
+	public void addGuess(char c) {
+		// 넘어온 문자를 검사해서 선택단어에 있으면 characters 배열에 저장
+		for (int i = 0; i < slectword.length(); i++) {// 단어 길이만큼 반복
+			if (c == slectword.charAt(i)) {
+				characters[i] = c;
+			}
+		}
+	}
+
+	public boolean iscompleted() {
+		// 철자를 다맞췄는지 체크해서 true or false로 리턴
+		for (char c : characters) { // 단어 전체 절차 반복 검사
+			if (c == '\u0000') {
+				return false; // 아직 맞춰야할 문자가 있음
+			}
+		}
+		return true; // 다맞춤
 	}
 
 }
